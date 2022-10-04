@@ -79,20 +79,39 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
+let shiftedFood = favoriteFoods.shift();
+console.log('removed the first food', shiftedFood);
+console.log('my favorite foods are now:', favoriteFoods);
 
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
+favoriteFoods[1] = 'chicken noodle soup';
+console.log('I\'ve changed my soup preference. Now my favorite foods are:', favoriteFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
 
+console.log('My favorite foods sorted in reverse alphabetical order are:' ,favoriteFoods.sort().reverse());
+//  All of our questions we are following mutate the array before logging the changes to the console. Is there a reason to do it that way rather than making the change in the same line of code with the console.log?
+
+
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+
+let stringFoods = favoriteFoods.join(' and ');
+console.log('My favorite foods are', stringFoods);
+
+// this is the alternative: 
+// console.log('My favorite foods are ', favoriteFoods.join(' and '));
+// do you find one or the other more readable? 
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+
+let favoriteFoodsAndAnimals = favoriteFoods.concat(animalArray);
+console.log(favoriteFoodsAndAnimals);
